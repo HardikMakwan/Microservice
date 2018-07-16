@@ -8,13 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-	@RequestMapping("/hello")
-	public String helloWithName(@RequestParam(name="name",required=false,defaultValue="world") String name) {
-		return "hello : "+name;
-	}
-	
-	@RequestMapping("/hello/{name}")
-	public String helloWithNameInPath(@PathVariable("name") String name) {
-		return "hello : "+name;
+	@RequestMapping("/hellocall")
+	public String fetchRequest(@RequestParam(name="name",required=false,
+	defaultValue="This is spring Boot Demo") String name) {
+		return "Response Message : "+name; 
 	}
 }
