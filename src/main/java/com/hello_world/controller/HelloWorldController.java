@@ -6,11 +6,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/registration")
 public class HelloWorldController {
 
 	@RequestMapping("/hellocall")
-	public String fetchRequest(@RequestParam(name="name",required=false,
-	defaultValue="This is spring Boot Demo") String name) {
-		return "Response Message : "+name; 
+	public WebServiceResponse fetchRequest(@RequestParam(name="name") String name) {
+		WebServiceResponse res = new WebServiceResponse();
+		res.setSucess(true);
+		res.setReturnObj(name);
+        return res;
 	}
+	
 }

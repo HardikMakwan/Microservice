@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<link rel="stylesheet" href="css/main.css"/>
-    <meta charset="UTF-8"/>
-    <title>SpringBootWithThemeLeaf</title>
+<link rel="stylesheet" href="css/main.css" />
+<meta charset="UTF-8" />
+<title>SpringBootWithThemeLeaf</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
-    <p class="p2tag">Wel Come To Spring Boot World</p>
-    
-    <p>
-     <a href="hellocall"> Click me to say Hello</a>
-    </p>
+	<p class="p2tag">Wel Come To Spring Boot World</p>
+	<!--     <p><a href="hellocall"> Click me to say Hello</a></p> -->
+
+	<div class="container">
+
+		<h3>Please Register Your Self Here :</h3>
+
+		<div>
+			<form class="form-inline" style="margin: 20px 20px 20px 20px"
+				id="customerForm">
+				<div class="form-group">
+					<label for="firstname" style="margin-right: 5px">UserName:</label>
+					<input type="text" class="form-control" id="uname"
+						placeholder="Enter FirstName" />
+				</div>
+				<input type="button" value="RegisterUser" class="btn btn-primary" id="registerUser">
+				
+			</form>
+			<div class="col-sm-7" id="postResultDiv">
+			</div>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/general.js"></script>
 </body>
 </html>
